@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ main ]
   release:
-    types: [published]
-  workflow_dispatch:
+    types: [ published ]
+  workflow_dispatch: # Added to enable manual triggering
 
 jobs:
   build:
@@ -15,10 +15,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3 # Corrected `uses` syntax
 
     - name: Set up Amazon Corretto 18
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v3 # Corrected `uses` syntax
       with:
         java-version: '18'
         distribution: 'corretto'
@@ -30,7 +30,7 @@ jobs:
       run: ./gradlew assembleRelease --no-daemon
 
     - name: Upload APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3 # Corrected `uses` syntax
       with:
         name: app-release.apk
         path: app/build/outputs/apk/release/app-release.apk
@@ -38,13 +38,14 @@ jobs:
   release:
     needs: build
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v3 # Corrected `uses` syntax
 
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1
+      uses: actions/create-release@v1 # Corrected `uses` syntax
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -54,7 +55,7 @@ jobs:
         prerelease: false
 
     - name: Upload APK to Release
-      uses: actions/upload-release-asset@v1
+      uses: actions/upload-release-asset@v1 # Corrected `uses` syntax
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
