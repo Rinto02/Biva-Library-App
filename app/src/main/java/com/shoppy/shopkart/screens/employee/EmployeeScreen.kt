@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.employee
+package com.bivalibrary.app.screens.employee
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,17 +15,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.ProfileRowComp
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.screens.admin.EmployeeScreenViewModel
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.ProfileRowComp
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.screens.admin.EmployeeScreenViewModel
 
 @Composable
 fun EmployeeScreen(navController: NavController,
                 viewModel: EmployeeScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel()) {
     
-    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Employee") }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Employee") }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
         
         Column(modifier = Modifier
             .padding(innerPadding)

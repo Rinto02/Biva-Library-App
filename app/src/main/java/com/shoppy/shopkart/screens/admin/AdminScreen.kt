@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.admin
+package com.bivalibrary.app.screens.admin
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -24,16 +24,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun AdminScreen(navController: NavController) {
 
-    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Admin") }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Admin") }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier
             .padding(innerPadding)

@@ -1,15 +1,15 @@
-package com.shoppy.shopkart.di
+package com.bivalibrary.app.di
 
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.network.NotificationApi
-import com.shoppy.shopkart.repository.FireAttendanceRepository
-import com.shoppy.shopkart.repository.FireCartRepository
-import com.shoppy.shopkart.repository.FireOrderRepository
-import com.shoppy.shopkart.repository.FireOrderStatusRepository
-import com.shoppy.shopkart.repository.FireRepository
-import com.shoppy.shopkart.repository.FireSearchRepository
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.network.NotificationApi
+import com.bivalibrary.app.repository.FireAttendanceRepository
+import com.bivalibrary.app.repository.FireCartRepository
+import com.bivalibrary.app.repository.FireOrderRepository
+import com.bivalibrary.app.repository.FireOrderStatusRepository
+import com.bivalibrary.app.repository.FireRepository
+import com.bivalibrary.app.repository.FireSearchRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -88,7 +88,7 @@ object AppModule {
     @Provides
     fun providesPostNotification(): NotificationApi {
         return Retrofit.Builder()
-            .baseUrl(ShopKartUtils.BASE_URL)
+            .baseUrl(BivaLibraryUtils.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(NotificationApi::class.java)

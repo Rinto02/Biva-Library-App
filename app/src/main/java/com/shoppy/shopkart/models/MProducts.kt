@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.models
+package com.bivalibrary.app.models
 
 data class MProducts(
     var product_url: Any? = null,

@@ -1,11 +1,11 @@
-package com.shoppy.shopkart
+package com.bivalibrary.app
 
 import android.os.Build.VERSION
 import android.os.Build.VERSION_CODES
 import androidx.compose.ui.graphics.Color
 
 
-object ShopKartUtils{
+object BivaLibraryUtils{
 
     //Colors
     val offWhite = Color(0xFFF5F5F5)

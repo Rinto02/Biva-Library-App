@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.employee.orderstatus
+package com.bivalibrary.app.screens.employee.orderstatus
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -25,12 +25,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.DeliveryStatusCard
-import com.shoppy.shopkart.models.MOrder
-import com.shoppy.shopkart.screens.search.SearchBox
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.DeliveryStatusCard
+import com.bivalibrary.app.models.MOrder
+import com.bivalibrary.app.screens.search.SearchBox
 
 @Composable
 fun DeliveredItemsEmp(navHostController: NavHostController, viewModel: OrderStatusEmpViewModel = hiltViewModel()){
@@ -45,7 +45,7 @@ fun DeliveredItemsEmp(navHostController: NavHostController, viewModel: OrderStat
 
     }!!
 
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Delivered Items", spacing = 50.dp) }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Delivered Items", spacing = 50.dp) }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier
             .padding(innerPadding)

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,9 +20,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.models.MOrder
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.models.MOrder
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.DecimalFormat
 
 //Used in Admin and Employee Screen
@@ -73,7 +73,7 @@ fun DeliveryStatusCard(ordered: MOrder,buttonTitle: String, navHostController: N
 //            if (buttonTitle == "Mark On The Way" || buttonTitle == "Mark Delivered") {
                 PillButton(
                     title = buttonTitle,
-                    color = ShopKartUtils.black.toInt(),
+                    color = BivaLibraryUtils.black.toInt(),
                     textSize = 12,
                     modifier = Modifier
                         .height(50.dp)

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.checkout.address
+package com.bivalibrary.app.screens.checkout.address
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -29,13 +29,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.ProgressBox
-import com.shoppy.shopkart.components.TextBox
-import com.shoppy.shopkart.components.TextBox3
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.ProgressBox
+import com.bivalibrary.app.components.TextBox
+import com.bivalibrary.app.components.TextBox3
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun EditAddressScreen(navController: NavHostController,viewModel: AddressViewModel = androidx.lifecycle.viewmodel.compose.viewModel()) {
@@ -51,7 +51,7 @@ fun EditAddressScreen(navController: NavHostController,viewModel: AddressViewMod
         addressState.value = it
     }
 
-    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Edit Address")}, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Edit Address")}, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(
             modifier = Modifier.padding(innerPadding),
@@ -75,7 +75,7 @@ fun EditAddressScreen(navController: NavHostController,viewModel: AddressViewMod
                     horizontalArrangement = Arrangement.Center
                 ) {
 
-                    ProgressBox(number = "1", title = "Address", color = ShopKartUtils.blue)
+                    ProgressBox(number = "1", title = "Address", color = BivaLibraryUtils.blue)
                     Divider(
                         modifier = Modifier
                             .height(2.dp)
@@ -96,7 +96,7 @@ fun EditAddressScreen(navController: NavHostController,viewModel: AddressViewMod
             TextBox3(label = "Phone no", value = phoneState.value, onChange = phoneState, keyBoardType = KeyboardType.Number, imeAction = ImeAction.Done)
             Text(text = errorState.value, style = TextStyle(fontSize = 15.sp, fontFamily = roboto, fontWeight = FontWeight.Bold), color = Color.Red)
 
-            PillButton(title = "Update Address", color = ShopKartUtils.black.toInt(), modifier = Modifier.padding(top = 12.dp)){
+            PillButton(title = "Update Address", color = BivaLibraryUtils.black.toInt(), modifier = Modifier.padding(top = 12.dp)){
 
                 if (phoneState.value.length > 10 || phoneState.value.length <= 9){
                    errorState.value = "Enter a valid number"

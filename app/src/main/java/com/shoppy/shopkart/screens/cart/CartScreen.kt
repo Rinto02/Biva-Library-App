@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.cart
+package com.bivalibrary.app.screens.cart
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -30,14 +30,14 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.CartCard
-import com.shoppy.shopkart.components.LoadingComp2
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.models.MCart
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.CartCard
+import com.bivalibrary.app.components.LoadingComp2
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.models.MCart
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.DecimalFormat
 
 @Composable
@@ -58,7 +58,7 @@ fun CartScreen(navController: NavHostController, viewModel: CartScreenViewModel 
     }
 
 
-    Scaffold(topBar = {CartAppBar()}, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = {CartAppBar()}, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         if (!viewModel.fireCart.value.loading!!) {
 
@@ -147,7 +147,7 @@ fun CartBottomBar(totalAmount: String,navHostController: NavHostController){
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        PillButton(title = "Check Out", color = ShopKartUtils.black.toInt()) {
+        PillButton(title = "Check Out", color = BivaLibraryUtils.black.toInt()) {
             navHostController.navigate(BottomNavScreens.AddressScreen.route)
         }
 

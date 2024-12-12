@@ -1,6 +1,6 @@
-package com.shoppy.shopkart.navigation
+package com.bivalibrary.app.navigation
 
-import com.shoppy.shopkart.R
+import com.bivalibrary.app.R
 
 sealed class BottomNavScreens(
     val route: String,

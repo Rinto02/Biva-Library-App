@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.home
+package com.bivalibrary.app.screens.home
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -7,12 +7,12 @@ import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.shoppy.shopkart.data.DataOrException
-import com.shoppy.shopkart.models.MBrand
-import com.shoppy.shopkart.models.MProducts
-import com.shoppy.shopkart.models.MSliders
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.repository.FireRepository
+import com.bivalibrary.app.data.DataOrException
+import com.bivalibrary.app.models.MBrand
+import com.bivalibrary.app.models.MProducts
+import com.bivalibrary.app.models.MSliders
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.repository.FireRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

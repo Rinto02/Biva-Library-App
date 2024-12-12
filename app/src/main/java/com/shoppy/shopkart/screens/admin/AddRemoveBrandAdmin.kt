@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.admin
+package com.bivalibrary.app.screens.admin
 
 import android.net.Uri
 import android.widget.Toast
@@ -23,12 +23,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.GalleryLaunchComp
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.SelectedImageItem
-import com.shoppy.shopkart.components.TextBox2
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.GalleryLaunchComp
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.SelectedImageItem
+import com.bivalibrary.app.components.TextBox2
 
 @Composable
 fun AddRemoveBrandAdmin(navHostController: NavHostController,viewModel: AdminScreenViewModel = hiltViewModel()){
@@ -43,7 +43,7 @@ fun AddRemoveBrandAdmin(navHostController: NavHostController,viewModel: AdminScr
 
     val context = LocalContext.current
 
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Add/Remove Brand", spacing = 30.dp) }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Add/Remove Brand", spacing = 30.dp) }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
@@ -67,7 +67,7 @@ fun AddRemoveBrandAdmin(navHostController: NavHostController,viewModel: AdminScr
 
             PillButton(
                 title = "Add Brand",
-                color = ShopKartUtils.black.toInt(),
+                color = BivaLibraryUtils.black.toInt(),
                 modifier = Modifier.padding(bottom = 20.dp, top = 10.dp)
             ) {
                 if (selectedBrandImageUri.value == null) {
@@ -90,7 +90,7 @@ fun AddRemoveBrandAdmin(navHostController: NavHostController,viewModel: AdminScr
             //Remove brand
             TextBox2(value = brandName.value, onChange = brandName, placeHolder = "Brand Name")
 
-            PillButton(title = "Remove Brand", color = ShopKartUtils.black.toInt()){
+            PillButton(title = "Remove Brand", color = BivaLibraryUtils.black.toInt()){
                 if (brandName.value.isNotEmpty()){
                     viewModel.removeBrand(brandName = brandName.value)
                     navHostController.popBackStack()

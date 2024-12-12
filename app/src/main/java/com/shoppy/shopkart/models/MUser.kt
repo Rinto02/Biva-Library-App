@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.models
+package com.bivalibrary.app.models
 
 data class MUser (
     var id: String? = null,

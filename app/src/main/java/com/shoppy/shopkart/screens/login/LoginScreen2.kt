@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.login
+package com.bivalibrary.app.screens.login
 
 import android.app.Activity
 import android.widget.Toast
@@ -43,13 +43,13 @@ import androidx.constraintlayout.compose.Dimension
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.google.android.gms.auth.api.identity.Identity
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.components.LoadingCompAuth
-import com.shoppy.shopkart.components.PasswordTextBox
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.TextBox
-import com.shoppy.shopkart.navigation.NavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.components.LoadingCompAuth
+import com.bivalibrary.app.components.PasswordTextBox
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.TextBox
+import com.bivalibrary.app.navigation.NavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -95,7 +95,7 @@ fun LoginScreen2(navController: NavController,viewModel: LoginViewModel =  andro
         val loginButton = createRefFor(id = "loginButton")
         val loadingComp = createRefFor(id = "loadingComp")
         val googleButton = createRefFor(id = "googleButton")
-        val newToShopKart = createRefFor(id = "newToShopKart")
+        val newToBivaLibrary = createRefFor(id = "newToBivaLibrary")
         val signInButton = createRefFor(id = "signInButton")
 
         constrain(image){
@@ -192,12 +192,12 @@ fun LoginScreen2(navController: NavController,viewModel: LoginViewModel =  andro
             top.linkTo(errorText.bottom, margin = 80.dp)
             start.linkTo(parent.start)
             end.linkTo(parent.end)
-            bottom.linkTo(newToShopKart.top)
+            bottom.linkTo(newToBivaLibrary.top)
             width = Dimension.wrapContent
             height = Dimension.wrapContent
         }
 
-        constrain(newToShopKart){
+        constrain(newToBivaLibrary){
             top.linkTo(googleButton.bottom)
             start.linkTo(parent.start, margin = 80.dp)
             end.linkTo(signInButton.start)
@@ -208,7 +208,7 @@ fun LoginScreen2(navController: NavController,viewModel: LoginViewModel =  andro
 
         constrain(signInButton){
             top.linkTo(googleButton.bottom)
-            start.linkTo(newToShopKart.end)
+            start.linkTo(newToBivaLibrary.end)
             end.linkTo(parent.end, margin = 90.dp)
             bottom.linkTo(parent.bottom)
             width = Dimension.wrapContent
@@ -301,9 +301,9 @@ fun LoginScreen2(navController: NavController,viewModel: LoginViewModel =  andro
             }
         }
 
-        Text(text = "New to ShopKart? ",
+        Text(text = "New to BivaLibrary? ",
             style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 16.sp, fontFamily = roboto),
-            color = Color.Black.copy(alpha = 0.4f), modifier = Modifier.layoutId("newToShopKart").padding(top = 10.dp, bottom = 10.dp))
+            color = Color.Black.copy(alpha = 0.4f), modifier = Modifier.layoutId("newToBivaLibrary").padding(top = 10.dp, bottom = 10.dp))
         
         Text(text = "Sign In",
             style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 16.sp, fontFamily = roboto),

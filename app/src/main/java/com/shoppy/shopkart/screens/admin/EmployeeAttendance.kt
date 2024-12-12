@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.admin
+package com.bivalibrary.app.screens.admin
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -35,13 +35,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.models.MAttendance
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.models.MAttendance
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -59,7 +59,7 @@ fun EmployeeAttendance(navController: NavHostController,viewModel: AdminScreenVi
 
     attendanceList.value = viewModel.fireAttendance.value.data!!.toMutableList()
 
-    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Attendance", spacing = 60.dp) }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Attendance", spacing = 60.dp) }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier
             .padding(innerPadding)
@@ -87,7 +87,7 @@ fun EmployeeAttendance(navController: NavHostController,viewModel: AdminScreenVi
                 .height(100.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
 
                 Text(text = "Employee List", style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold, fontFamily = roboto), modifier = Modifier.padding(10.dp))
-                PillButton(title = "Clear", color = ShopKartUtils.black.toInt(), modifier = Modifier.width(100.dp)){ viewModel.clearAttendance(context = context) }
+                PillButton(title = "Clear", color = BivaLibraryUtils.black.toInt(), modifier = Modifier.width(100.dp)){ viewModel.clearAttendance(context = context) }
             }
 
             LazyColumn {
@@ -187,7 +187,7 @@ fun AttendanceItem(card: MAttendance,day: String,navController: NavHostControlle
                     Column(modifier = Modifier
                         .fillMaxHeight()
                         .width(60.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.Start) {
-                        PillButton(title = "P", color = ShopKartUtils.black.toInt(), enabled = isEnabledP.value, modifier = Modifier
+                        PillButton(title = "P", color = BivaLibraryUtils.black.toInt(), enabled = isEnabledP.value, modifier = Modifier
                             .fillMaxWidth()
                             .height(40.dp)){
                             viewModel.presentOrAbsent(PAB = "Present", orderId = card.id!!, Day = day){
@@ -196,7 +196,7 @@ fun AttendanceItem(card: MAttendance,day: String,navController: NavHostControlle
                             }
                         }
                         Spacer(modifier = Modifier.height(5.dp))
-                        PillButton(title = "AB", color = ShopKartUtils.black.toInt(), enabled = isEnabledAB.value, modifier = Modifier
+                        PillButton(title = "AB", color = BivaLibraryUtils.black.toInt(), enabled = isEnabledAB.value, modifier = Modifier
                             .fillMaxWidth()
                             .height(40.dp)){
                             viewModel.presentOrAbsent(PAB = "Absent", orderId = card.id!!, Day = day){

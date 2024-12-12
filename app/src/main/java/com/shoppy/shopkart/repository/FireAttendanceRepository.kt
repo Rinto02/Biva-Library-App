@@ -1,9 +1,9 @@
-package com.shoppy.shopkart.repository
+package com.bivalibrary.app.repository
 
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.Query
-import com.shoppy.shopkart.data.DataOrException
-import com.shoppy.shopkart.models.MAttendance
+import com.bivalibrary.app.data.DataOrException
+import com.bivalibrary.app.models.MAttendance
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 

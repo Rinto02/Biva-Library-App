@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.myprofile
+package com.bivalibrary.app.screens.myprofile
 
 import android.net.Uri
 import android.util.Log

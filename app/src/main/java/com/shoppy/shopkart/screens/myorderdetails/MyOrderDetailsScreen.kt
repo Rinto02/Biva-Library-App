@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.myorderdetails
+package com.bivalibrary.app.screens.myorderdetails
 
 import android.content.Context
 import android.widget.Toast
@@ -43,13 +43,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.ProgressBox
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.ProgressBox
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.DecimalFormat
 
 @Composable
@@ -85,7 +85,7 @@ fun MyOrderDetailsScreen(navController: NavController,
             )
         }, modifier = Modifier
             .fillMaxSize(),
-        backgroundColor = ShopKartUtils.offWhite
+        backgroundColor = BivaLibraryUtils.offWhite
     ) { innerPadding ->
 
         Column(
@@ -98,15 +98,15 @@ fun MyOrderDetailsScreen(navController: NavController,
         ) {
 
             //Changing status color according to delivery_status
-            val ordered = ShopKartUtils.blue
+            val ordered = BivaLibraryUtils.blue
             var onTheWay = Color.Gray
             var delivered = Color.Gray
 
             if (status == "On The Way") {
-                onTheWay = ShopKartUtils.blue
+                onTheWay = BivaLibraryUtils.blue
             } else if (status == "Delivered") {
-                onTheWay = ShopKartUtils.blue
-                delivered = ShopKartUtils.blue
+                onTheWay = BivaLibraryUtils.blue
+                delivered = BivaLibraryUtils.blue
             }
 
             //Progress Indicator 1-2-3
@@ -193,7 +193,7 @@ fun MyOrderDetailsScreen(navController: NavController,
                             else -> R.drawable.ordered
                         }
 
-                        val tint =  if (status == "Cancelled") Color.Red else if (status == "Delivered") Color(0xFFCDDC39) else if (status == "On The Way") ShopKartUtils.blue else Color.Black
+                        val tint =  if (status == "Cancelled") Color.Red else if (status == "Delivered") Color(0xFFCDDC39) else if (status == "On The Way") BivaLibraryUtils.blue else Color.Black
 
                         Icon(
                             modifier = Modifier
@@ -442,11 +442,11 @@ fun MyOrderDetailsScreen(navController: NavController,
             AnimatedVisibility(visible = isEnabled.value) {
 
                 PillButton(
-                    title = "Cancel Order", modifier = Modifier.padding(top = 30.dp, bottom = 20.dp), color = ShopKartUtils.black.toInt(), textColor = Color.Red) { openDialog.value = true }
+                    title = "Cancel Order", modifier = Modifier.padding(top = 30.dp, bottom = 20.dp), color = BivaLibraryUtils.black.toInt(), textColor = Color.Red) { openDialog.value = true }
             }
 
             //Calling Alert Dialog
-            ShopKartDialog(openDialog = openDialog,
+            BivaLibraryDialog(openDialog = openDialog,
                 onTap = { viewModel.cancelOrder(product_title = product_title)
 
                     //Navigating back to Orders Screen to refresh and pop backstack
@@ -468,7 +468,7 @@ fun MyOrderDetailsScreen(navController: NavController,
 
         //Cancel Order Alert Dialog
         @Composable
-        fun ShopKartDialog(openDialog: MutableState<Boolean>, onTap: () -> Unit,context:Context,navController: NavController,title: String,subTitle: String,button1: String,button2: String,toast: String) {
+        fun BivaLibraryDialog(openDialog: MutableState<Boolean>, onTap: () -> Unit,context:Context,navController: NavController,title: String,subTitle: String,button1: String,button2: String,toast: String) {
             if (openDialog.value) {
                 AlertDialog(
                     onDismissRequest = { openDialog.value = false },

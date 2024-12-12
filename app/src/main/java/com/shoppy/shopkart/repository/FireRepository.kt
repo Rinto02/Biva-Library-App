@@ -1,11 +1,11 @@
-package com.shoppy.shopkart.repository
+package com.bivalibrary.app.repository
 
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.Query
-import com.shoppy.shopkart.data.DataOrException
-import com.shoppy.shopkart.models.MBrand
-import com.shoppy.shopkart.models.MProducts
-import com.shoppy.shopkart.models.MSliders
+import com.bivalibrary.app.data.DataOrException
+import com.bivalibrary.app.models.MBrand
+import com.bivalibrary.app.models.MProducts
+import com.bivalibrary.app.models.MSliders
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 

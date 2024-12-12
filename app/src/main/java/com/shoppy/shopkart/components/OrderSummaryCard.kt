@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -33,10 +33,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.models.MCart
-import com.shoppy.shopkart.screens.checkout.ordersummary.OrderSummaryScreenViewModel
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.models.MCart
+import com.bivalibrary.app.screens.checkout.ordersummary.OrderSummaryScreenViewModel
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.DecimalFormat
 
 @Composable

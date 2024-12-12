@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.mainscreenholder
+package com.bivalibrary.app.screens.mainscreenholder
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedVisibility
@@ -15,10 +15,10 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.google.android.gms.auth.api.identity.Identity
-import com.shoppy.shopkart.navigation.BottomNavBar
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.navigation.BottomNavigation
-import com.shoppy.shopkart.navigation.NavScreens
+import com.bivalibrary.app.navigation.BottomNavBar
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.navigation.BottomNavigation
+import com.bivalibrary.app.navigation.NavScreens
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable

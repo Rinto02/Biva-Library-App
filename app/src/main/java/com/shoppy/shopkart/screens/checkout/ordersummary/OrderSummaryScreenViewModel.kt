@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.checkout.ordersummary
+package com.bivalibrary.app.screens.checkout.ordersummary
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -6,9 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.shoppy.shopkart.data.DataOrException
-import com.shoppy.shopkart.models.MCart
-import com.shoppy.shopkart.repository.FireCartRepository
+import com.bivalibrary.app.data.DataOrException
+import com.bivalibrary.app.models.MCart
+import com.bivalibrary.app.repository.FireCartRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.admin.orderstatus
+package com.bivalibrary.app.screens.admin.orderstatus
 
 import android.util.Log
 import android.widget.Toast
@@ -30,16 +30,16 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.google.firebase.messaging.FirebaseMessaging
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.DeliveryStatusCard
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.models.MOrder
-import com.shoppy.shopkart.models.NotificationData
-import com.shoppy.shopkart.models.PushNotificationData
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.screens.search.SearchBox
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.DeliveryStatusCard
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.models.MOrder
+import com.bivalibrary.app.models.NotificationData
+import com.bivalibrary.app.models.PushNotificationData
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.screens.search.SearchBox
 
 @Composable
 fun OrderedItems(navHostController: NavHostController,viewModel: OrderStatusViewModel = hiltViewModel()){
@@ -60,9 +60,9 @@ fun OrderedItems(navHostController: NavHostController,viewModel: OrderStatusView
 
     }!!
 
-    FirebaseMessaging.getInstance().subscribeToTopic(ShopKartUtils.TOPIC)
+    FirebaseMessaging.getInstance().subscribeToTopic(BivaLibraryUtils.TOPIC)
 
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Ordered Items", spacing = 50.dp) }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Ordered Items", spacing = 50.dp) }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier
             .padding(innerPadding)

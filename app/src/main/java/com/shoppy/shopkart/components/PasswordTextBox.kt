@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
@@ -24,8 +24,8 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun PasswordTextBox(value: String,onChange: MutableState<String>,imeAction: ImeAction = ImeAction.Next,modifier: Modifier = Modifier){

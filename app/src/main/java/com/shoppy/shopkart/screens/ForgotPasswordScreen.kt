@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens
+package com.bivalibrary.app.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,13 +19,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.TextBox
-import com.shoppy.shopkart.screens.login.LoginViewModel
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.TextBox
+import com.bivalibrary.app.screens.login.LoginViewModel
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun ForgotPasswordScreen(navHostController: NavHostController,viewModel: LoginViewModel = androidx.lifecycle.viewmodel.compose.viewModel()){
@@ -35,14 +35,14 @@ fun ForgotPasswordScreen(navHostController: NavHostController,viewModel: LoginVi
 
     val successState = remember { mutableStateOf("") }
 
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Forgot Password", spacing = 50.dp) }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Forgot Password", spacing = 50.dp) }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier.padding(innerPadding).padding(20.dp).fillMaxSize(), verticalArrangement = Arrangement.Top, horizontalAlignment = Alignment.CenterHorizontally) {
 
             TextBox(value = emailState.value, labelId = "Email", onChange = emailState, leadingIcon = R.drawable.email, keyBoardType = KeyboardType.Email, imeAction = ImeAction.Next)
             TextBox(value = newPasswordState.value, labelId = "New Password", onChange = newPasswordState, leadingIcon = R.drawable.lock, keyBoardType = KeyboardType.Password, imeAction = ImeAction.Done)
 
-            PillButton(title = "Find Account", color = ShopKartUtils.black.toInt(), modifier = Modifier.padding(top = 10.dp)){
+            PillButton(title = "Find Account", color = BivaLibraryUtils.black.toInt(), modifier = Modifier.padding(top = 10.dp)){
                 if (emailState.value.isEmpty()){
                     successState.value = "Enter Your Email"
                 } else if (newPasswordState.value.isEmpty()){

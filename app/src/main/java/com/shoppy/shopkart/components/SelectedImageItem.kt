@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import android.net.Uri
 import androidx.compose.foundation.Image

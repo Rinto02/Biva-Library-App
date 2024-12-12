@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.data
+package com.bivalibrary.app.data
 
 //data class SuccessOrError<Boolean,E: String>(
 ////    var data: T? = null,

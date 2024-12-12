@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -39,19 +39,19 @@ import androidx.constraintlayout.compose.ConstraintSet
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.navigation.NavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.navigation.NavScreens
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
-fun ShopKartAppBar(userName: String?, profile_url: String?, onClick: () -> Unit = {  }){
+fun BivaLibraryAppBar(userName: String?, profile_url: String?, onClick: () -> Unit = {  }){
 
     Surface(modifier = Modifier
         .fillMaxWidth()
         .height(170.dp),
-        color = ShopKartUtils.offWhite) {
+        color = BivaLibraryUtils.offWhite) {
 
         Column(modifier = Modifier
             .fillMaxSize()
@@ -67,11 +67,11 @@ fun ShopKartAppBar(userName: String?, profile_url: String?, onClick: () -> Unit 
                     .size(40.dp)
                     .clip(RoundedCornerShape(10.dp))){
 
-                    Image(painter = painterResource(id = R.drawable.logo), contentDescription = "ShopKart Logo" )
+                    Image(painter = painterResource(id = R.drawable.logo), contentDescription = "BivaLibrary Logo" )
                 }
                 Spacer(modifier = Modifier.width(15.dp))
 
-                Text(text = "ShopKart", style = TextStyle(fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, fontFamily = roboto))
+                Text(text = "BivaLibrary", style = TextStyle(fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, fontFamily = roboto))
 
                 Spacer(modifier = Modifier.width(50.dp))
 
@@ -120,38 +120,38 @@ fun ShopKartAppBar(userName: String?, profile_url: String?, onClick: () -> Unit 
 }
 
 @Composable
-fun ShopKartAppBar2(userName: String?, profile_url: String?, navHostController: NavHostController,onClick: () -> Unit = {  }){
+fun BivaLibraryAppBar2(userName: String?, profile_url: String?, navHostController: NavHostController,onClick: () -> Unit = {  }){
     val constraints = ConstraintSet{
-        val shopKartIcon = createRefFor(id = "ShopKartIcon")
-        val shopKart = createRefFor(id = "ShopKart")
+        val BivaLibraryIcon = createRefFor(id = "BivaLibraryIcon")
+        val BivaLibrary = createRefFor(id = "BivaLibrary")
         val box = createRefFor(id = "box")
         val name = createRefFor(id = "UserName")
         val profileImage = createRefFor(id = "ProfileImage")
         val searchBar = createRefFor(id = "SearchBar")
 
-        constrain(shopKartIcon){
+        constrain(BivaLibraryIcon){
             top.linkTo(parent.top, margin = 20.dp)
             start.linkTo(parent.start, margin = 20.dp)
-            end.linkTo(shopKart.start)
+            end.linkTo(BivaLibrary.start)
             bottom.linkTo(searchBar.top)
         }
         
-        constrain(shopKart){
+        constrain(BivaLibrary){
             top.linkTo(parent.top, margin = 20.dp)
-            start.linkTo(shopKartIcon.end)
+            start.linkTo(BivaLibraryIcon.end)
             end.linkTo(name.start, margin = 40.dp)
             bottom.linkTo(searchBar.top)
         }
         
         constrain(box){
             top.linkTo(parent.top, margin = 20.dp)
-            start.linkTo(shopKart.end)
+            start.linkTo(BivaLibrary.end)
             end.linkTo(profileImage.start)
             bottom.linkTo(searchBar.top)
         }
         constrain(name){
             top.linkTo(parent.top, margin = 20.dp)
-            start.linkTo(shopKart.end)
+            start.linkTo(BivaLibrary.end)
             end.linkTo(profileImage.start)
             bottom.linkTo(searchBar.top)
         }
@@ -164,7 +164,7 @@ fun ShopKartAppBar2(userName: String?, profile_url: String?, navHostController: 
         }
 
         constrain(searchBar){
-            top.linkTo(shopKartIcon.top, margin = 40.dp)
+            top.linkTo(BivaLibraryIcon.top, margin = 40.dp)
             start.linkTo(parent.start, margin = 20.dp)
             end.linkTo(parent.end, margin = 20.dp)
             bottom.linkTo(parent.bottom)
@@ -176,14 +176,14 @@ fun ShopKartAppBar2(userName: String?, profile_url: String?, navHostController: 
         .fillMaxWidth()) {
 
         Box(modifier = Modifier
-            .layoutId("ShopKartIcon")
+            .layoutId("BivaLibraryIcon")
             .size(40.dp)
             .clip(RoundedCornerShape(10.dp))){
 
-            Image(painter = painterResource(id = R.drawable.logo), contentDescription = "ShopKart Logo" )
+            Image(painter = painterResource(id = R.drawable.logo), contentDescription = "BivaLibrary Logo" )
         }
 
-        Text(text = "ShopKart", style = TextStyle(fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, fontFamily = roboto), modifier = Modifier.layoutId("ShopKart"))
+        Text(text = "BivaLibrary", style = TextStyle(fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, fontFamily = roboto), modifier = Modifier.layoutId("BivaLibrary"))
 
         //Right side Composable only shown if username is not empty
         if (userName != ""){
@@ -242,5 +242,5 @@ fun ShopKartAppBar2(userName: String?, profile_url: String?, navHostController: 
 @Preview
 @Composable
 fun Prev(){
-    ShopKartAppBar2("Prasidh","", navHostController = rememberNavController())
+    BivaLibraryAppBar2("Prasidh","", navHostController = rememberNavController())
 }

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens
+package com.bivalibrary.app.screens
 
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
@@ -18,9 +18,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.navigation.NavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.navigation.NavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import kotlinx.coroutines.delay
 
 @Composable

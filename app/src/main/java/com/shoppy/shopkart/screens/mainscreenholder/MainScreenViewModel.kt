@@ -1,11 +1,11 @@
-package com.shoppy.shopkart.screens.mainscreenholder
+package com.bivalibrary.app.screens.mainscreenholder
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.navigation.NavScreens
+import com.bivalibrary.app.navigation.NavScreens
 import kotlinx.coroutines.launch
 
 class MainScreenViewModel: ViewModel() {

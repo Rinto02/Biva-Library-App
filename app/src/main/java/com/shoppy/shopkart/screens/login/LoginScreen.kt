@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.login
+package com.bivalibrary.app.screens.login
 
 import android.annotation.SuppressLint
 import android.app.Activity.RESULT_OK
@@ -48,15 +48,15 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.LoadingComp
-import com.shoppy.shopkart.components.LoadingCompAuth
-import com.shoppy.shopkart.components.PasswordTextBox
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.TextBox
-import com.shoppy.shopkart.navigation.NavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.LoadingComp
+import com.bivalibrary.app.components.LoadingCompAuth
+import com.bivalibrary.app.components.PasswordTextBox
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.TextBox
+import com.bivalibrary.app.navigation.NavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -95,7 +95,7 @@ fun LoginScreen(navController: NavController,viewModel: LoginViewModel = android
 
 
 
-    Surface(modifier = Modifier.fillMaxSize(), color = ShopKartUtils.offWhite) {
+    Surface(modifier = Modifier.fillMaxSize(), color = BivaLibraryUtils.offWhite) {
 
         BoxWithConstraints(
             modifier = Modifier.width(width.dp).height(height.dp),
@@ -234,7 +234,7 @@ fun LoginScreen(navController: NavController,viewModel: LoginViewModel = android
                 Row {
 
                     Text(
-                        text = "New to ShopKart? ",
+                        text = "New to BivaLibrary? ",
                         style = TextStyle(
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,

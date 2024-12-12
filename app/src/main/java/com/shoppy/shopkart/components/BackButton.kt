@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import android.widget.Toast
 import androidx.compose.foundation.Image
@@ -33,10 +33,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.screens.details.DetailsScreenViewModel
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.screens.details.DetailsScreenViewModel
+import com.bivalibrary.app.ui.theme.roboto
 
 
 @Composable

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.admin
+package com.bivalibrary.app.screens.admin
 
 import android.content.Context
 import android.net.Uri
@@ -11,13 +11,13 @@ import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import com.shoppy.shopkart.data.DataOrException
-import com.shoppy.shopkart.models.MAttendance
-import com.shoppy.shopkart.models.MBrand
-import com.shoppy.shopkart.models.MProducts
-import com.shoppy.shopkart.models.MSliders
-import com.shoppy.shopkart.models.MUser
-import com.shoppy.shopkart.repository.FireAttendanceRepository
+import com.bivalibrary.app.data.DataOrException
+import com.bivalibrary.app.models.MAttendance
+import com.bivalibrary.app.models.MBrand
+import com.bivalibrary.app.models.MProducts
+import com.bivalibrary.app.models.MSliders
+import com.bivalibrary.app.models.MUser
+import com.bivalibrary.app.repository.FireAttendanceRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

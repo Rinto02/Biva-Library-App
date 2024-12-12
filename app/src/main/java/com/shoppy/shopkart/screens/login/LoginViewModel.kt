@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.login
+package com.bivalibrary.app.screens.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,9 +6,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import com.shoppy.shopkart.data.SuccessOrError
-import com.shoppy.shopkart.models.MUser
-import com.shoppy.shopkart.models.SignInResultData
+import com.bivalibrary.app.data.SuccessOrError
+import com.bivalibrary.app.models.MUser
+import com.bivalibrary.app.models.SignInResultData
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

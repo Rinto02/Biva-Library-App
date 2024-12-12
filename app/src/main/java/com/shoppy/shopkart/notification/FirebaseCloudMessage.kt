@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.notification
+package com.bivalibrary.app.notification
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -14,8 +14,8 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.shoppy.shopkart.MainActivity
-import com.shoppy.shopkart.R
+import com.bivalibrary.app.MainActivity
+import com.bivalibrary.app.R
 import kotlin.random.Random
 
 class FirebaseCloudMessage: FirebaseMessagingService() {

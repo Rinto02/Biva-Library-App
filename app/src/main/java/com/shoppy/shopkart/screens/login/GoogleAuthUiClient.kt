@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.login
+package com.bivalibrary.app.screens.login
 
 import android.content.Context
 import android.content.Intent
@@ -10,9 +10,9 @@ import com.google.android.gms.auth.api.identity.SignInClient
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.models.SignInResultData
-import com.shoppy.shopkart.models.UserData
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.models.SignInResultData
+import com.bivalibrary.app.models.UserData
 import kotlinx.coroutines.tasks.await
 import java.util.concurrent.CancellationException
 
@@ -60,7 +60,7 @@ class GoogleAuthUiClient(private val context: Context, private val oneTapClient:
                 //If true only accounts signed in will be shown
             .setFilterByAuthorizedAccounts(false)
             //Web Client Id from Firebase
-            .setServerClientId(ShopKartUtils.webClientId).build())
+            .setServerClientId(BivaLibraryUtils.webClientId).build())
                 //If Only one account is present directly select that one
             .setAutoSelectEnabled(false).build()
     }

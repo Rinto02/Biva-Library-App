@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.checkout.payment
+package com.bivalibrary.app.screens.checkout.payment
 
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
@@ -50,16 +50,16 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.ProgressBox
-import com.shoppy.shopkart.components.TextBox2
-import com.shoppy.shopkart.models.MCart
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.screens.checkout.ordersummary.OrderSummaryScreenViewModel
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.ProgressBox
+import com.bivalibrary.app.components.TextBox2
+import com.bivalibrary.app.models.MCart
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.screens.checkout.ordersummary.OrderSummaryScreenViewModel
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.DecimalFormat
 
 
@@ -147,7 +147,7 @@ fun PaymentScreen(
 
 
     Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Payment") },
-        backgroundColor = ShopKartUtils.offWhite, bottomBar = {
+        backgroundColor = BivaLibraryUtils.offWhite, bottomBar = {
             PaymentBottomBar(
                 totalAmount = totalAmount,
                 creditCard = creditCard.value,
@@ -187,19 +187,19 @@ fun PaymentScreen(
                     horizontalArrangement = Arrangement.Center
                 ) {
 
-                    ProgressBox(number = "1", title = "Address", color = ShopKartUtils.blue)
+                    ProgressBox(number = "1", title = "Address", color = BivaLibraryUtils.blue)
                     Divider(
                         modifier = Modifier
                             .height(2.dp)
                             .width(40.dp)
                     )
-                    ProgressBox(number = "2", title = "Order Summary", color = ShopKartUtils.blue)
+                    ProgressBox(number = "2", title = "Order Summary", color = BivaLibraryUtils.blue)
                     Divider(
                         modifier = Modifier
                             .height(2.dp)
                             .width(40.dp)
                     )
-                    ProgressBox(number = "3", title = "Payment", color = ShopKartUtils.blue)
+                    ProgressBox(number = "3", title = "Payment", color = BivaLibraryUtils.blue)
                 }
             }
 
@@ -305,7 +305,7 @@ fun CardPayment(
             style = TextStyle(fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = roboto),
             color = Color.Black.copy(0.4f)
         )
-        TextBox2(value = name.value, onChange = name, placeHolder = "ShopKart")
+        TextBox2(value = name.value, onChange = name, placeHolder = "BivaLibrary")
         Text(
             modifier = Modifier.padding(start = 10.dp, top = 10.dp),
             text = "Card Number",
@@ -405,7 +405,7 @@ fun PaymentBottomBar(
 
         PillButton(
             title = "Confirm Order",
-            color = ShopKartUtils.black.toInt(),
+            color = BivaLibraryUtils.black.toInt(),
             modifier = Modifier.padding(top = 5.dp)
         ) {
 
@@ -445,7 +445,7 @@ fun PaymentBottomBar(
             }
         }
         Text(
-            text = "Secured By ShopKart",
+            text = "Secured By BivaLibrary",
             style = TextStyle(
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Normal,

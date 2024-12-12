@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.home
+package com.bivalibrary.app.screens.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -38,18 +38,18 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.LoadingComp
-import com.shoppy.shopkart.components.ProductCard
-import com.shoppy.shopkart.components.ShopKartAppBar2
-import com.shoppy.shopkart.components.SliderItem
-import com.shoppy.shopkart.models.MBrand
-import com.shoppy.shopkart.models.MProducts
-import com.shoppy.shopkart.models.MSliders
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.screens.details.DetailsScreenViewModel
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.LoadingComp
+import com.bivalibrary.app.components.ProductCard
+import com.bivalibrary.app.components.BivaLibraryAppBar2
+import com.bivalibrary.app.components.SliderItem
+import com.bivalibrary.app.models.MBrand
+import com.bivalibrary.app.models.MProducts
+import com.bivalibrary.app.models.MSliders
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.screens.details.DetailsScreenViewModel
+import com.bivalibrary.app.ui.theme.roboto
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -123,7 +123,7 @@ fun HomeScreen(
 
     Scaffold(
         topBar = {
-            ShopKartAppBar2(
+            BivaLibraryAppBar2(
                 userName = userNameState.value,
                 profile_url = imageState.value,
                 navHostController = navController
@@ -133,7 +133,7 @@ fun HomeScreen(
                 navController.navigate(BottomNavScreens.SearchScreen.route)
             }
         },
-        backgroundColor = ShopKartUtils.offWhite
+        backgroundColor = BivaLibraryUtils.offWhite
     ) { innerPadding ->
 
         Box(

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.navigation
+package com.bivalibrary.app.navigation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -29,7 +29,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.ShopKartUtils
+import com.bivalibrary.app.BivaLibraryUtils
 
 @Composable
 fun BottomNavBar(navHostController: NavHostController,
@@ -55,7 +55,7 @@ fun BottomNavBar(navHostController: NavHostController,
             .height(115.dp)
             .padding(start = padding, end = padding, top = 35.dp, bottom = 10.dp),
         shape = RoundedCornerShape(40.dp),
-        color = ShopKartUtils.darkBlue,
+        color = BivaLibraryUtils.darkBlue,
     ) {
 
         Row(

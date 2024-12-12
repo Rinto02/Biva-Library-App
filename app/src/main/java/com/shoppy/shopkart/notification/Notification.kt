@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.notification
+package com.bivalibrary.app.notification
 
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -11,8 +11,8 @@ import androidx.core.app.NotificationCompat
 import coil.ImageLoader
 import coil.request.ImageRequest
 import coil.request.SuccessResult
-import com.shoppy.shopkart.MainActivity
-import com.shoppy.shopkart.R
+import com.bivalibrary.app.MainActivity
+import com.bivalibrary.app.R
 import kotlin.random.Random
 
 class Notification(private val context: Context) {

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.models
+package com.bivalibrary.app.models
 
 data class MBrand(
     val logo: Any? = null,

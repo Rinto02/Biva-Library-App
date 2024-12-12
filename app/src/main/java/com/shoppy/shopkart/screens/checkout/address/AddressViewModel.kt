@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.checkout.address
+package com.bivalibrary.app.screens.checkout.address
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

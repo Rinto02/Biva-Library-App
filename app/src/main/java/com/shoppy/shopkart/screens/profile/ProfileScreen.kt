@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.profile
+package com.bivalibrary.app.screens.profile
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -27,11 +27,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.ProfileCards
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.screens.myorderdetails.ShopKartDialog
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.ProfileCards
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.screens.myorderdetails.BivaLibraryDialog
 
 //252.dp
 @Composable
@@ -89,13 +89,13 @@ fun ProfileScreen(navController: NavController,
 
     val openDialog = remember { mutableStateOf(false) }
 
-    Scaffold(backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
 
 //    Surface(
 //        modifier = Modifier
 //            .fillMaxSize(),
-//        color = ShopKartUtils.offWhite
+//        color = BivaLibraryUtils.offWhite
 //    ) {
 //
 //        Column(modifier = Modifier
@@ -219,7 +219,7 @@ fun ProfileScreen(navController: NavController,
     }
 
     //Calling Alert Dialog
-    ShopKartDialog(openDialog = openDialog,
+    BivaLibraryDialog(openDialog = openDialog,
         onTap = { signOut.invoke() },
         context = context,
         navController = navController,

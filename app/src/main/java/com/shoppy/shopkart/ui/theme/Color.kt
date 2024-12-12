@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.ui.theme
+package com.bivalibrary.app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -29,10 +29,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.models.MProducts
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.models.MProducts
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.text.DecimalFormat

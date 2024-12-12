@@ -1,11 +1,11 @@
-package com.shoppy.shopkart
+package com.bivalibrary.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
-import com.shoppy.shopkart.navigation.ShopKartNavigation
-import com.shoppy.shopkart.ui.theme.ShopKartTheme
+import com.bivalibrary.app.navigation.BivaLibraryNavigation
+import com.bivalibrary.app.ui.theme.BivaLibraryTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -13,14 +13,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ShopKartTheme {
-                ShopKartApp()
+            BivaLibraryTheme {
+                BivaLibraryApp()
             }
         }
     }
 }
 
 @Composable
-fun ShopKartApp(){
-    ShopKartNavigation()
+fun BivaLibraryApp(){
+    BivaLibraryNavigation()
 }

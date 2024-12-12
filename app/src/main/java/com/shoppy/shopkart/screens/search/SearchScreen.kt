@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.search
+package com.bivalibrary.app.screens.search
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
@@ -55,15 +55,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.LoadingComp
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.ShopKartAppBar
-import com.shoppy.shopkart.models.MProducts
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.LoadingComp
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.BivaLibraryAppBar
+import com.bivalibrary.app.models.MProducts
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.text.DecimalFormat
@@ -84,7 +84,7 @@ fun SearchScreen(navController: NavHostController,viewModel: SearchScreenViewMod
 
 //    val isLoading = remember { mutableStateOf(false) }
 
-    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Search") }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Search") }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
 //        if (isLoading.value && searchResultList.value.isEmpty()) {
 
@@ -200,7 +200,7 @@ fun SearchScreen(navController: NavHostController,viewModel: SearchScreenViewMod
 //                }!!
 //            }
 
-//            IconButton(modifier = Modifier.size(50.dp).clip(RoundedCornerShape(12.dp)).background(ShopKartUtils.blue), onClick = {
+//            IconButton(modifier = Modifier.size(50.dp).clip(RoundedCornerShape(12.dp)).background(BivaLibraryUtils.blue), onClick = {
 //
 //                searchResultList.value = viewModel.fireSearch.value.data?.toList()?.filter { mProducts ->
 //

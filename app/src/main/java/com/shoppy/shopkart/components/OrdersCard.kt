@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -41,15 +41,15 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.google.firebase.messaging.FirebaseMessaging
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.models.MOrder
-import com.shoppy.shopkart.models.NotificationData
-import com.shoppy.shopkart.models.PushNotificationData
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.notification.Notification
-import com.shoppy.shopkart.screens.orders.MyOrderViewModel
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.models.MOrder
+import com.bivalibrary.app.models.NotificationData
+import com.bivalibrary.app.models.PushNotificationData
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.notification.Notification
+import com.bivalibrary.app.screens.orders.MyOrderViewModel
+import com.bivalibrary.app.ui.theme.roboto
 import kotlinx.coroutines.launch
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
@@ -104,20 +104,20 @@ for (card in cardList){
     }
 }
 
-//    FirebaseMessaging.getInstance().subscribeToTopic(ShopKartUtils.TOPIC)
+//    FirebaseMessaging.getInstance().subscribeToTopic(BivaLibraryUtils.TOPIC)
 
   /*  for (card in cardList){
         when(card.delivery_status){
             "Delivered" -> PushNotificationData(
                 data = NotificationData(title = "Delivered", message = "Your ${card.product_title} is delivered"),
-                to = ShopKartUtils.TOPIC
+                to = BivaLibraryUtils.TOPIC
             ).also {
                 viewModel.sendNotification(it)
             }
 
             else -> PushNotificationData(
                 data = NotificationData(title = "On The Way", message = "Your ${card.product_title} is on the way"),
-                to = ShopKartUtils.TOPIC
+                to = BivaLibraryUtils.TOPIC
             ).also {
                 viewModel.sendNotification(it)
             }
@@ -221,7 +221,7 @@ fun OrdersCardItem(mOrder: MOrder, navController: NavController) {
                     else if (mOrder.delivery_status!! == "Cancelled") R.drawable.cancel
                     else R.drawable.ordered
 
-                    val tint =  if (mOrder.delivery_status!! == "Cancelled") Color.Red else if (mOrder.delivery_status!! == "Delivered") Color(0xFFCDDC39) else if (mOrder.delivery_status!! == "On The Way") ShopKartUtils.blue else Color.Black
+                    val tint =  if (mOrder.delivery_status!! == "Cancelled") Color.Red else if (mOrder.delivery_status!! == "Delivered") Color(0xFFCDDC39) else if (mOrder.delivery_status!! == "On The Way") BivaLibraryUtils.blue else Color.Black
 
                     Icon(modifier = Modifier
                         .padding(start = 5.dp, top = 8.dp)

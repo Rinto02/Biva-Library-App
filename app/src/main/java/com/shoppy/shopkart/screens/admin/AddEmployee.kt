@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.admin
+package com.bivalibrary.app.screens.admin
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -18,12 +18,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.TextBox
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.TextBox
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun AddEmployee(navHostController: NavHostController,viewModel: AdminScreenViewModel = hiltViewModel()){
@@ -38,7 +38,7 @@ fun AddEmployee(navHostController: NavHostController,viewModel: AdminScreenViewM
 
     val context = LocalContext.current
 
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Add Employee", spacing = 50.dp) }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Add Employee", spacing = 50.dp) }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier
             .padding(innerPadding)
@@ -50,7 +50,7 @@ fun AddEmployee(navHostController: NavHostController,viewModel: AdminScreenViewM
             TextBox(value = employeeAddress.value, labelId = "Employee address", onChange = employeeAddress, leadingIcon = R.drawable.address)
             TextBox(value = employeePhone.value, labelId = "Employee phone", onChange = employeePhone, leadingIcon = R.drawable.call)
 
-            PillButton(title = "Add Employee", color = ShopKartUtils.black.toInt(), modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)){
+            PillButton(title = "Add Employee", color = BivaLibraryUtils.black.toInt(), modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)){
                 if (employeeName.value.isNotEmpty() &&
                     employeeEmail.value.isNotEmpty() &&
                     employeePass.value.isNotEmpty() &&

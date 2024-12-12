@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.myprofile
+package com.bivalibrary.app.screens.myprofile
 
 import android.net.Uri
 import android.widget.Toast
@@ -40,12 +40,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.TextBox3
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.TextBox3
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun MyProfileScreen(navController: NavController,viewModel: MyProfileViewModel = androidx.lifecycle.viewmodel.compose.viewModel()){
@@ -73,7 +73,7 @@ fun MyProfileScreen(navController: NavController,viewModel: MyProfileViewModel =
             onResult = { uri -> urlState.value = uri })
 
     Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "My Profile") }, scaffoldState = scaffoldState, modifier = Modifier
-        .fillMaxSize(), backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+        .fillMaxSize(), backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier
             .padding(innerPadding)

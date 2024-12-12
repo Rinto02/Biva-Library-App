@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
@@ -30,8 +30,8 @@ import coil.compose.AsyncImage
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.PagerState
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.models.MSliders
+import com.bivalibrary.app.R
+import com.bivalibrary.app.models.MSliders
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.yield
 

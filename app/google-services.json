@@ -1,44 +1,26 @@
 {
   "project_info": {
-    "project_number": "75755133388",
-    "project_id": "shopkart-c4ef5",
-    "storage_bucket": "shopkart-c4ef5.appspot.com"
+    "project_number": "734277903802",
+    "project_id": "biva-library-official",
+    "storage_bucket": "biva-library-official.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:75755133388:android:e67cc46eda41e8e9f0a569",
+        "mobilesdk_app_id": "1:734277903802:android:b95b975972af78a1ae2983",
         "android_client_info": {
-          "package_name": "com.shoppy.shopkart"
+          "package_name": "com.bivalibrary.app"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "75755133388-ogbpa6d6sgsgnd9v1rc4m619lcv3h6mg.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.shoppy.shopkart",
-            "certificate_hash": "5cf65d362180e386036a7e337c81629627afa8ee"
-          }
-        },
-        {
-          "client_id": "75755133388-rc7nfobjf70i2kk7pgunapfke5cf39mt.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC9bCetIXBbWLSHQ90n0unX2xRFxKIydFw"
+          "current_key": "AIzaSyB2Vr7KIRr6lbxYJL7I1oWy0lTsvbxIB30"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "75755133388-gomadvb8dqfmc2q0im2fotm0ldnm3eq3.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

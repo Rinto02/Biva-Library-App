@@ -1,13 +1,13 @@
-package com.shoppy.shopkart.screens.admin
+package com.bivalibrary.app.screens.admin
 
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import com.shoppy.shopkart.models.MBrand
-import com.shoppy.shopkart.models.MProducts
-import com.shoppy.shopkart.models.MSliders
+import com.bivalibrary.app.models.MBrand
+import com.bivalibrary.app.models.MProducts
+import com.bivalibrary.app.models.MSliders
 import kotlinx.coroutines.launch
 import java.util.UUID
 

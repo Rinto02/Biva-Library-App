@@ -1,10 +1,10 @@
-package com.shoppy.shopkart.screens.details
+package com.bivalibrary.app.screens.details
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.shoppy.shopkart.models.MCart
+import com.bivalibrary.app.models.MCart
 import kotlinx.coroutines.launch
 
 class DetailsScreenViewModel :ViewModel(){

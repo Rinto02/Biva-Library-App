@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.orders
+package com.bivalibrary.app.screens.orders
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -29,13 +29,13 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.LoadingComp
-import com.shoppy.shopkart.components.LoadingComp2
-import com.shoppy.shopkart.components.OrdersCard
-import com.shoppy.shopkart.models.MOrder
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.LoadingComp
+import com.bivalibrary.app.components.LoadingComp2
+import com.bivalibrary.app.components.OrdersCard
+import com.bivalibrary.app.models.MOrder
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun OrdersScreen(navController: NavController,viewModel: MyOrderViewModel = hiltViewModel()){
@@ -52,14 +52,14 @@ fun OrdersScreen(navController: NavController,viewModel: MyOrderViewModel = hilt
         }
     }
 
-    Scaffold(topBar = { OrdersAppBar() }, modifier = Modifier.fillMaxSize(), backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = { OrdersAppBar() }, modifier = Modifier.fillMaxSize(), backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         if (!viewModel.fireOrder.value.loading!!) {
 
             Column(
                 modifier = Modifier
                     .padding(innerPadding)
-                    .background(ShopKartUtils.offWhite)
+                    .background(BivaLibraryUtils.offWhite)
                     .fillMaxSize(),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.SpaceBetween

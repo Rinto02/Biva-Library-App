@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -20,7 +20,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun TextBox(

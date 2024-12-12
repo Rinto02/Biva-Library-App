@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.navigation
+package com.bivalibrary.app.navigation
 
 enum class NavScreens {
     SplashScreen,

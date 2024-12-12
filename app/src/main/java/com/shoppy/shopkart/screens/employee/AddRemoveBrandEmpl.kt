@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.employee
+package com.bivalibrary.app.screens.employee
 
 import android.net.Uri
 import android.widget.Toast
@@ -22,13 +22,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.GalleryLaunchComp
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.SelectedImageItem
-import com.shoppy.shopkart.components.TextBox2
-import com.shoppy.shopkart.screens.admin.EmployeeScreenViewModel
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.GalleryLaunchComp
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.SelectedImageItem
+import com.bivalibrary.app.components.TextBox2
+import com.bivalibrary.app.screens.admin.EmployeeScreenViewModel
 
 @Composable
 fun AddRemoveBrandEmpl(navHostController: NavHostController,viewModel: EmployeeScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel()){
@@ -43,7 +43,7 @@ fun AddRemoveBrandEmpl(navHostController: NavHostController,viewModel: EmployeeS
 
     val context = LocalContext.current
 
-    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Add/Remove Brand", spacing = 30.dp) }, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(modifier = Modifier.fillMaxSize(), topBar = { BackButton(navController = navHostController, topBarTitle = "Add/Remove Brand", spacing = 30.dp) }, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
@@ -67,7 +67,7 @@ fun AddRemoveBrandEmpl(navHostController: NavHostController,viewModel: EmployeeS
 
             PillButton(
                 title = "Add Brand",
-                color = ShopKartUtils.black.toInt(),
+                color = BivaLibraryUtils.black.toInt(),
                 modifier = Modifier.padding(bottom = 20.dp, top = 10.dp)
             ) {
                 if (selectedBrandImageUri.value == null) {
@@ -90,7 +90,7 @@ fun AddRemoveBrandEmpl(navHostController: NavHostController,viewModel: EmployeeS
             //Remove brand
             TextBox2(value = brandName.value, onChange = brandName, placeHolder = "Brand Name")
 
-            PillButton(title = "Remove Brand", color = ShopKartUtils.black.toInt()){
+            PillButton(title = "Remove Brand", color = BivaLibraryUtils.black.toInt()){
                 if (brandName.value.isNotEmpty()){
                     viewModel.removeBrand(brandName = brandName.value)
                     navHostController.popBackStack()

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.details
+package com.bivalibrary.app.screens.details
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -40,11 +40,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.DecimalFormat
 
 @Composable
@@ -89,7 +89,7 @@ fun DetailsScreen(
         modifier = Modifier
             .width(width.dp)
             .height(height.dp),
-        backgroundColor = ShopKartUtils.offWhite
+        backgroundColor = BivaLibraryUtils.offWhite
     ) { innerPadding ->
 
         Column(
@@ -195,7 +195,7 @@ fun AddToCart(email: String,buTitle: String,viewModel: DetailsScreenViewModel,ur
 
                 PillButton(
                     title = buTitle,
-                    color = ShopKartUtils.black.toInt(),
+                    color = BivaLibraryUtils.black.toInt(),
                     textColor = textColor,
                     shape = 16.dp,
                     modifier = Modifier

@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens
+package com.bivalibrary.app.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -32,16 +32,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun AboutScreen(navController: NavController){
 
     val uriHandler = LocalUriHandler.current
-    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "About")}, backgroundColor = ShopKartUtils.offWhite, modifier = Modifier
+    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "About")}, backgroundColor = BivaLibraryUtils.offWhite, modifier = Modifier
         .fillMaxSize()) { innerPadding ->
 
         Column(modifier = Modifier
@@ -58,7 +58,7 @@ fun AboutScreen(navController: NavController){
                 Image(painter = painterResource(id = R.drawable.rengoku), contentDescription = "About Image")
             }
             
-            Text(text = "ShopKart is a Online Shopping App developed using Jetpack Compose and Firebase for backend, this app follows the Clean Architecture and has a clean UI.",
+            Text(text = "BivaLibrary is a Online Shopping App developed using Jetpack Compose and Firebase for backend, this app follows the Clean Architecture and has a clean UI.",
                 style = TextStyle(fontSize = 18.sp, fontWeight = FontWeight.Bold, fontFamily = roboto),
                 modifier = Modifier.padding(top = 10.dp, bottom = 10.dp), textAlign = TextAlign.Center)
             

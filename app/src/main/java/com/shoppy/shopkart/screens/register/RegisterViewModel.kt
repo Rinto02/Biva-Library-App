@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.register
+package com.bivalibrary.app.screens.register
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,7 +6,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
-import com.shoppy.shopkart.models.MUser
+import com.bivalibrary.app.models.MUser
 import kotlinx.coroutines.launch
 
 class RegisterViewModel:ViewModel() {

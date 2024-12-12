@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.checkout.address
+package com.bivalibrary.app.screens.checkout.address
 
 import android.widget.Toast
 import androidx.compose.foundation.background
@@ -36,13 +36,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.ProgressBox
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.navigation.NavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.ProgressBox
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.navigation.NavScreens
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun AddressScreen(navController: NavController,viewModel: AddressViewModel = androidx.lifecycle.viewmodel.compose.viewModel()){
@@ -57,7 +57,7 @@ fun AddressScreen(navController: NavController,viewModel: AddressViewModel = and
         address.value = it
     }
 
-    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Address")}, backgroundColor = ShopKartUtils.offWhite) { innerPadding ->
+    Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Address")}, backgroundColor = BivaLibraryUtils.offWhite) { innerPadding ->
 
         Column(modifier = Modifier.padding(innerPadding),
             verticalArrangement = Arrangement.Top,
@@ -76,7 +76,7 @@ fun AddressScreen(navController: NavController,viewModel: AddressViewModel = and
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center) {
 
-                    ProgressBox(number = "1", title = "Address", color = ShopKartUtils.blue)
+                    ProgressBox(number = "1", title = "Address", color = BivaLibraryUtils.blue)
                     Divider(modifier = Modifier
                         .height(2.dp)
                         .width(40.dp))
@@ -126,7 +126,7 @@ fun AddressScreen(navController: NavController,viewModel: AddressViewModel = and
                 }
             }
 
-            PillButton(title = "Continue", color = ShopKartUtils.black.toInt(), modifier = Modifier.padding(top = 10.dp)){
+            PillButton(title = "Continue", color = BivaLibraryUtils.black.toInt(), modifier = Modifier.padding(top = 10.dp)){
                 if (address.value.isEmpty()) {
                     Toast.makeText(context, "Add Address", Toast.LENGTH_LONG).show()
                 }else if (phone.value.isEmpty()){

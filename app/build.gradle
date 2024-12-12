@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace 'com.shoppy.shopkart'
+    namespace 'com.bivalibrary.app'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.shoppy.shopkart"
+        applicationId "com.bivalibrary.app"
         minSdk 29
         targetSdk 35
         versionCode 1

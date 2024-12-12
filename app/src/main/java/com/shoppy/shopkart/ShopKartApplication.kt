@@ -1,4 +1,4 @@
-package com.shoppy.shopkart
+package com.bivalibrary.app
 
 import android.app.Application
 import android.app.NotificationChannel
@@ -7,7 +7,7 @@ import android.content.Context
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class ShopKartApplication: Application() {
+class BivaLibraryApplication: Application() {
 
     //Creating channel for API level 33 (Android 13)
     //Checking android version for minimum O is not required as this app supports minimum android 10

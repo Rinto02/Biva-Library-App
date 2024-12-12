@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.checkout
+package com.bivalibrary.app.screens.checkout
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -27,11 +27,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun OrderSuccessScreen(navController: NavHostController) {
@@ -40,7 +40,7 @@ fun OrderSuccessScreen(navController: NavHostController) {
 
 Column(modifier = Modifier
     .fillMaxSize()
-    .background(ShopKartUtils.offWhite),verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
+    .background(BivaLibraryUtils.offWhite),verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
 
     Surface(modifier = Modifier.size(300.dp), shape = RoundedCornerShape(12.dp)) {
 
@@ -59,7 +59,7 @@ Column(modifier = Modifier
         haptic.performHapticFeedback(hapticFeedbackType = HapticFeedbackType.LongPress)
     }
 
-    PillButton(title = "Back To Home", color = ShopKartUtils.black.toInt(),modifier = Modifier.padding(top = 25.dp)){
+    PillButton(title = "Back To Home", color = BivaLibraryUtils.black.toInt(),modifier = Modifier.padding(top = 25.dp)){
 //        navController.popBackStack()
         navController.navigate(BottomNavScreens.Home.route){ popUpTo(id = navController.graph.findStartDestination().id) }
 //        navController.navigate(BottomNavScreens.Cart.route)

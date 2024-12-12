@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.myorderdetails
+package com.bivalibrary.app.screens.myorderdetails
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

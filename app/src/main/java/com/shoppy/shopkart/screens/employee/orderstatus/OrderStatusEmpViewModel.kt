@@ -1,13 +1,13 @@
-package com.shoppy.shopkart.screens.employee.orderstatus
+package com.bivalibrary.app.screens.employee.orderstatus
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.FirebaseFirestore
-import com.shoppy.shopkart.data.DataOrException
-import com.shoppy.shopkart.models.MOrder
-import com.shoppy.shopkart.repository.FireOrderStatusRepository
+import com.bivalibrary.app.data.DataOrException
+import com.bivalibrary.app.models.MOrder
+import com.bivalibrary.app.repository.FireOrderStatusRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

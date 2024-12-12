@@ -1,4 +1,4 @@
-package com.shoppy.shopkart
+package com.bivalibrary.app
 
 import org.junit.Test
 

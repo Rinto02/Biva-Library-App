@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.components
+package com.bivalibrary.app.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -13,12 +13,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.shoppy.shopkart.ShopKartUtils
+import com.bivalibrary.app.BivaLibraryUtils
 
 //Progress Bar
 @Composable
 fun LoadingComp() {
-    Column(modifier = Modifier.fillMaxSize().background(ShopKartUtils.offWhite),
+    Column(modifier = Modifier.fillMaxSize().background(BivaLibraryUtils.offWhite),
         horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
 
         Spacer(modifier = Modifier.height(250.dp))
@@ -29,7 +29,7 @@ fun LoadingComp() {
 
 @Composable
 fun LoadingComp2() {
-    Column(modifier = Modifier.fillMaxSize().background(ShopKartUtils.offWhite),
+    Column(modifier = Modifier.fillMaxSize().background(BivaLibraryUtils.offWhite),
         horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
 
 //        Spacer(modifier = Modifier.height(250.dp))

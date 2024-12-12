@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.data
+package com.bivalibrary.app.data
 
 data class DataOrException<T,Boolean,E: Exception>(
     var data: T? = null,

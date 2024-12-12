@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.employee
+package com.bivalibrary.app.screens.employee
 
 import android.net.Uri
 import android.widget.Toast
@@ -31,14 +31,14 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.GalleryLaunchComp
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.SelectedImageItem
-import com.shoppy.shopkart.components.TextBox2
-import com.shoppy.shopkart.screens.admin.EmployeeScreenViewModel
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.GalleryLaunchComp
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.SelectedImageItem
+import com.bivalibrary.app.components.TextBox2
+import com.bivalibrary.app.screens.admin.EmployeeScreenViewModel
+import com.bivalibrary.app.ui.theme.roboto
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -80,7 +80,7 @@ fun AddProductSliderEmpl(navHostController: NavHostController,viewModel: Employe
         },
         modifier = Modifier
             .fillMaxSize(),
-        backgroundColor = ShopKartUtils.offWhite
+        backgroundColor = BivaLibraryUtils.offWhite
     ) { innerPadding ->
 
         Column(
@@ -111,7 +111,7 @@ fun AddProductSliderEmpl(navHostController: NavHostController,viewModel: Employe
 
             PillButton(
                 title = "Post Slider",
-                color = ShopKartUtils.black.toInt(),
+                color = BivaLibraryUtils.black.toInt(),
                 modifier = Modifier
                     .padding(bottom = 20.dp, top = 10.dp)
                     .align(Alignment.CenterHorizontally)
@@ -238,7 +238,7 @@ fun AddProductSliderEmpl(navHostController: NavHostController,viewModel: Employe
 
                 PillButton(
                     title = "Post Product",
-                    color = ShopKartUtils.black.toInt(),
+                    color = BivaLibraryUtils.black.toInt(),
                     modifier = Modifier
                         .padding(bottom = 25.dp)
                         .align(Alignment.CenterHorizontally)

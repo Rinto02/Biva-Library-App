@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.checkout.ordersummary
+package com.bivalibrary.app.screens.checkout.ordersummary
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -39,15 +39,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.OrderSummaryCard
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.ProgressBox
-import com.shoppy.shopkart.models.MCart
-import com.shoppy.shopkart.navigation.BottomNavScreens
-import com.shoppy.shopkart.navigation.NavScreens
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.OrderSummaryCard
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.ProgressBox
+import com.bivalibrary.app.models.MCart
+import com.bivalibrary.app.navigation.BottomNavScreens
+import com.bivalibrary.app.navigation.NavScreens
+import com.bivalibrary.app.ui.theme.roboto
 import java.text.DecimalFormat
 
 @Composable
@@ -106,7 +106,7 @@ fun OrderSummaryScreen(navController: NavHostController,viewModel: OrderSummaryS
     }
 
     Scaffold(topBar = { BackButton(navController = navController, topBarTitle = "Order Summary", spacing = 60.dp) },
-        backgroundColor = ShopKartUtils.offWhite, bottomBar = { SummaryBottomBar(totalAmount = totalAmount.value,navController = navController) }) { innerPadding ->
+        backgroundColor = BivaLibraryUtils.offWhite, bottomBar = { SummaryBottomBar(totalAmount = totalAmount.value,navController = navController) }) { innerPadding ->
 
         ConstraintLayout(constraintSet = constraints, modifier = Modifier.padding(innerPadding).fillMaxSize(), animateChanges = true) {
 
@@ -124,11 +124,11 @@ fun OrderSummaryScreen(navController: NavHostController,viewModel: OrderSummaryS
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.Center) {
 
-                    ProgressBox(number = "1", title = "Address", color = ShopKartUtils.blue)
+                    ProgressBox(number = "1", title = "Address", color = BivaLibraryUtils.blue)
                     Divider(modifier = Modifier
                         .height(2.dp)
                         .width(40.dp))
-                    ProgressBox(number = "2", title = "Order Summary",color = ShopKartUtils.blue)
+                    ProgressBox(number = "2", title = "Order Summary",color = BivaLibraryUtils.blue)
                     Divider(modifier = Modifier
                         .height(2.dp)
                         .width(40.dp))
@@ -185,7 +185,7 @@ fun SummaryBottomBar(totalAmount:Int,navController: NavController){
             }
 
             //280 is price with delivery charge and GST 100 + 180
-            PillButton(title = "Continue", color = ShopKartUtils.black.toInt()){ navController.navigate(BottomNavScreens.PaymentScreen.route + "/${totalAmount + 280}") }
+            PillButton(title = "Continue", color = BivaLibraryUtils.black.toInt()){ navController.navigate(BottomNavScreens.PaymentScreen.route + "/${totalAmount + 280}") }
         }
 
     }

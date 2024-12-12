@@ -1,4 +1,4 @@
-package com.shoppy.shopkart.screens.register
+package com.bivalibrary.app.screens.register
 
 import android.widget.Toast
 import androidx.compose.foundation.clickable
@@ -29,14 +29,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.shoppy.shopkart.R
-import com.shoppy.shopkart.ShopKartUtils
-import com.shoppy.shopkart.components.BackButton
-import com.shoppy.shopkart.components.PasswordTextBox
-import com.shoppy.shopkart.components.PillButton
-import com.shoppy.shopkart.components.TextBox
-import com.shoppy.shopkart.screens.login.Quotes
-import com.shoppy.shopkart.ui.theme.roboto
+import com.bivalibrary.app.R
+import com.bivalibrary.app.BivaLibraryUtils
+import com.bivalibrary.app.components.BackButton
+import com.bivalibrary.app.components.PasswordTextBox
+import com.bivalibrary.app.components.PillButton
+import com.bivalibrary.app.components.TextBox
+import com.bivalibrary.app.screens.login.Quotes
+import com.bivalibrary.app.ui.theme.roboto
 
 @Composable
 fun RegisterScreen(navController: NavController,viewModel: RegisterViewModel = androidx.lifecycle.viewmodel.compose.viewModel()){
@@ -53,7 +53,7 @@ fun RegisterScreen(navController: NavController,viewModel: RegisterViewModel = a
     val height = LocalConfiguration.current.screenHeightDp
     val width = LocalConfiguration.current.screenWidthDp
 
-    Surface(modifier = Modifier.fillMaxSize(), color = ShopKartUtils.offWhite) {
+    Surface(modifier = Modifier.fillMaxSize(), color = BivaLibraryUtils.offWhite) {
 
         BoxWithConstraints(modifier = Modifier.width(width.dp).height(height.dp), contentAlignment = Alignment.TopCenter) {
 
@@ -65,7 +65,7 @@ fun RegisterScreen(navController: NavController,viewModel: RegisterViewModel = a
                 BackButton(navController = navController)
 
 
-                Text(text = "Welcome To ShopKart",
+                Text(text = "Welcome To BivaLibrary",
                     style = TextStyle(fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, fontFamily = roboto),
                     textAlign = TextAlign.Center,
                     modifier = Modifier
@@ -122,7 +122,7 @@ fun RegisterScreen(navController: NavController,viewModel: RegisterViewModel = a
                         if (emailState.value.contains("admin.")){
                             errorState.value = "Email cannot have admin"
                         }else if (emailState.value.contains("employee.")) {
-                            errorState.value = "Employee account cannot be created here contact ShopKart"
+                            errorState.value = "Employee account cannot be created here contact BivaLibrary"
                         }else if (phoneState.value.length > 10) {
                             errorState.value = "Enter a valid Phone number"
                         }else{
