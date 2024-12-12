@@ -12,7 +12,12 @@
           "package_name": "com.bivalibrary.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "734277903802-4atlnncfq108jv4vomuvhpvh1uce1qtq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyB2Vr7KIRr6lbxYJL7I1oWy0lTsvbxIB30"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734277903802-4atlnncfq108jv4vomuvhpvh1uce1qtq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
