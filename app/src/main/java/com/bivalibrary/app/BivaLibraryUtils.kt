@@ -14,7 +14,7 @@ object BivaLibraryUtils{
     const val black = 0xFF23272a
 
     //Add your Google Web Client Id from firebase
-    const val webClientId = ""
+    const val webClientId = "734277903802-4atlnncfq108jv4vomuvhpvh1uce1qtq.apps.googleusercontent.com"
 
     //FCM constants //Not used
     const val API_KEY = ""
